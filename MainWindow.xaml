@@ -1,0 +1,53 @@
+﻿<Window x:Class="miapr5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:miapr5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="69*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="108*"/>
+            <RowDefinition Height="109*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="1,1,0,0">
+            <Slider x:Name="SliderObjectNumber" HorizontalAlignment="Center" IsSnapToTickEnabled="True" Margin="0,90,0,0" VerticalAlignment="Top" Width="192" TickPlacement="BottomRight" Minimum="1"/>
+            <Slider x:Name="SliderAttributeNumber" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="192" TickPlacement="BottomRight" IsSnapToTickEnabled="True" Minimum="1"/>
+            <Slider x:Name="SliderClassesNumber" HorizontalAlignment="Center" Margin="0,36,0,0" VerticalAlignment="Top" Width="192" TickPlacement="BottomRight" IsSnapToTickEnabled="True" Minimum="1"/>
+            <TextBlock HorizontalAlignment="Left" Margin="28,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"><Run Text="Number of classes"/><LineBreak/><Run/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="27,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"><Run Text="Number of object in class"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="27,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"><Run Text="Number of attributes in object"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <Button Content="Generate decisive functions&#xA;" HorizontalAlignment="Center" Margin="0,185,0,0" VerticalAlignment="Top" Width="192" Height="20" Click="ButtonCreateSelection_Click"/>
+        </Grid>
+        <Grid Margin="0,1,0,1" Grid.RowSpan="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="131*"/>
+                <ColumnDefinition Width="145*"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="ListViewSelection" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" Width="262">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView x:Name="ListViewSolutions" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Width="285" Grid.Column="1" Margin="0,0,0,-1">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="1,1,551,-1">
+            <TextBox HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="228"/>
+            <Button Content="Classify" Margin="66,173,66,21" Click="ButtonClassify_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>
