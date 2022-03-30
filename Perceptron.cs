@@ -25,7 +25,7 @@ namespace PerceptronNS
 
         private readonly int _classesCount;
         private readonly int _objectsInClassCount;
-        private readonly int _attributesCount;
+        public int _attributesCount;
         public List<PerceptronClass> _classes = new List<PerceptronClass>();
         public List<PerceptronObject> _weights = new List<PerceptronObject>();
         public List<PerceptronObject> _decisionFunctions;

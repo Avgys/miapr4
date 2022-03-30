@@ -12,8 +12,8 @@
             <ColumnDefinition Width="69*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="108*"/>
-            <RowDefinition Height="109*"/>
+            <RowDefinition Height="237*"/>
+            <RowDefinition Height="197*"/>
         </Grid.RowDefinitions>
         <Grid Margin="1,1,0,0">
             <Slider x:Name="SliderObjectNumber" HorizontalAlignment="Center" IsSnapToTickEnabled="True" Margin="0,90,0,0" VerticalAlignment="Top" Width="192" TickPlacement="BottomRight" Minimum="1"/>
@@ -36,7 +36,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <ListView x:Name="ListViewSolutions" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Width="285" Grid.Column="1" Margin="0,0,0,-1">
+            <ListView x:Name="ListViewSolutions" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" Width="285" Grid.Column="1" Margin="0,0,0,-1" >
                 <ListView.View>
                     <GridView>
                         <GridViewColumn/>
@@ -44,9 +44,9 @@
                 </ListView.View>
             </ListView>
         </Grid>
-        <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="1,1,551,-1">
-            <TextBox HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="228"/>
-            <Button Content="Classify" Margin="66,173,66,21" Click="ButtonClassify_Click"/>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="1,5,551,4">
+            <TextBox x:Name="InputObject" HorizontalAlignment="Center" Margin="0,31,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="228"/>
+            <Button Content="Classify" Margin="66,151,66,10" Click="ButtonClassify_Click"/>
         </Grid>
 
     </Grid>
